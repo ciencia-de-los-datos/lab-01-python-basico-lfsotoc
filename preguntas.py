@@ -225,12 +225,12 @@ def pregunta_07():
     """
     registros = leer_archivo()
     diccionario = {}
-    for i in registros:
-        if i[1] not in diccionario.keys():
-            diccionario[int(i[1])] = [i[0]]
+    for fila in registros:
+        if int(fila[1]) not in diccionario:
+            diccionario[int(fila[1])] = [fila[0]]
         else:
-            diccionario[int(i[1])].append(i[0])
-        
+            diccionario[int(fila[1])].append(fila[0])
+            
     tuplas = [(key, value) for key, value in diccionario.items()]
     
     return sorted(tuplas)
@@ -303,9 +303,8 @@ def pregunta_09():
                 diccionario[dia] = 1  
             else:
                 diccionario[dia] += 1 
-    dicc_ord = sorted(diccionario.items())
-    dict(dicc_ord)
-   
+    dicc_ord = dict(sorted(diccionario.items()))
+    
     return dicc_ord
 
 
@@ -339,7 +338,7 @@ def pregunta_10():
     
     return lista_tuplas
 
-pregunta_10()
+
 
 
 def pregunta_11():
@@ -375,7 +374,7 @@ def pregunta_11():
     
     return dicc_ord
 
-pregunta_11()
+
 
 def pregunta_12():
     """
@@ -407,9 +406,9 @@ def pregunta_12():
         else:
             diccionario[columna1] += suma_col5
     diccionario_f = dict(sorted(diccionario.items())) 
-    print(diccionario_f)
+    
     return diccionario_f    
             
             
-pregunta_12()   
+  
 
