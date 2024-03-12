@@ -409,7 +409,7 @@ def pregunta_12():
     diccionario_f = dict(sorted(diccionario.items())) 
     
     return diccionario_f   
-            
+       
             
   
 
