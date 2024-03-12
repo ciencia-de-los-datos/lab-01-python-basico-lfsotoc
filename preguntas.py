@@ -407,7 +407,7 @@ def pregunta_12():
             diccionario[columna1] += suma_col5
     diccionario_f = dict(sorted(diccionario.items())) 
     
-    return diccionario_f    
+    return diccionario_f   
             
             
   
