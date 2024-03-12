@@ -20,7 +20,6 @@ def test_02():
         ("E", 14),
     ]
 
-
 def test_03():
     assert preguntas.pregunta_03() == [
         ("A", 53),
